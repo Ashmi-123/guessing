@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>
+    number guessing game
+</title>
+<style>
+    body{
+        background-color:rgb(237, 237, 150);
+    height: 200px;
+    }
+.mi1{
+    background-color: white;
+    
+    height: 280px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(225, 213, 213);
+    margin-left: 500px;
+}
+.mi3{
+    width:230px;
+    height: 40px;
+    margin-left: 50px;
+    margin-top: 20px;
+    border: 3px solid rgb(238, 63, 139);
+    background-color: transparent;
+    border-radius: 20px;
+
+}
+
+.mi4{
+    color:white;
+    font-size:16px;
+    margin-left: 120px;
+    margin-top: 15px;
+    border: 3px solid rgb(238, 63, 139);
+    background-color:  rgb(238, 63, 139);
+    border-radius: 20px;
+    padding: 10px;
+    width: 90px;
+}
+.mi5{
+    color: black;
+    font-size: 20px;
+    margin-left:130px;
+    margin-top: 10px;
+}
+h3{
+    color: black;
+    font-size: 25px;
+    text-align: center;
+}
+.para{
+    margin-top: 70px;
+    
+}
+.pink{
+    font-size: 16px;
+}
+.pink1{
+    font-size: 16px;
+}
+</style>
+    </head>
+    <body>
+        <h3>
+            NUMBER GUESSING GAME
+        </h3>
+        <div class="mi1">
+        <input type="text"  class="mi3" id="ash">
+        <div class="mi2">
+        <input type="submit" value="guess" class="mi4" onclick="mi()">
+        </div>
+        <div id="hel" class="mi5"></div>
+        <table>
+        <div class="ee">
+            <tr>   
+                <td>
+                         <h5 class="pink">
+            Correct:
+            </h5>
+            </td>
+            <td>
+                <p id="dd"></p>
+            </td>
+        </tr>
+
+       
+            <tr>
+                <td>
+            <h5 class="pink1">
+            Wrong:
+            </h5>
+            </td>
+            <td>
+                <p id="dd1"></p>
+            </td>
+        </tr>
+        </div>
+        </table>
+        </div>
+        <div class="para">
+            <h2>
+                Instructions
+            </h2>
+            <p>
+                <ul><li>
+                    This is a number guessing game
+                </li>
+                <li>
+Enter your guessed number in the given text box
+                </li>
+                <li>
+                    Then enter guess button
+                </li>
+<li>
+    You have 5 chances left
+</li>
+<li>
+    If you guess 5 answers correctly then you will won the game
+</li>
+                </ul>
+            </p>
+        </div>
+        <script>
+           y=[];
+           x1=[];
+           z=[];
+            x=0;
+                y1=0;
+            function mi(){
+               
+a=parseInt(document.getElementById('ash').value);
+c=Math.floor(Math.random()*10);
+/*if(a==c){
+    document.getElementById('hel').innerHTML='your won the game';
+    x=x+1;
+}
+
+else{
+    document.getElementById('hel').innerHTML='game over';
+}*/
+y.push(c);
+console.log(y);
+z.push(a);
+console.log(z);
+if(c==a){
+x1.push(1);
+
+x=x+1;
+if(x==5){
+    document.getElementById('hel').innerHTML='your won the game';
+    
+}
+}
+else{
+    y1=y1+1;
+    x1.push(0);
+    if(y1==5){
+    document.getElementById('hel').innerHTML='Game over';
+    
+}
+
+}
+
+  console.log(x1); 
+  a=parseInt(document.getElementById('ash').value);
+  document.getElementById('dd').innerHTML=x;
+       m=y1-x;
+       a=parseInt(document.getElementById('ash').value);
+       document.getElementById('dd1').innerHTML=m;
+      }
+           
+            
+        </script>
+    </body>
+</html>
